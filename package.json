@@ -1,5 +1,5 @@
 {
-  "name": "displacejs",
+  "name": "displacejs-ilkkah",
   "version": "1.4.0",
   "description": "Tiny javascript library to create moveable DOM elements.",
   "main": "dist/displace.min.js",
