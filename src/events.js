@@ -52,7 +52,7 @@ export function mousemove(offsetW, offsetH, e){
 		x = data.xClamp(x);
 		y = data.yClamp(y);
 	}
-	this.handleMove(el, x, y);
+	this.handleMove(el, x, y, e);
 
 	// prevent highlighting text when dragging
 	e.preventDefault();
@@ -126,7 +126,7 @@ export function touchmove(offsetW, offsetH, e){
 		x = data.xClamp(x);
 		y = data.yClamp(y);
 	}
-	this.handleMove(el, x, y);
+	this.handleMove(el, x, y, e);
 
 	// prevent highlighting text when dragging
 	e.preventDefault();

@@ -1,3 +1,3 @@
-import displace from 'displace';
+import displace from './displace.js';
 
-module.exports = displace;
+export default displace;

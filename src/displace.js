@@ -2,7 +2,7 @@ import {
 	generateClamp,
 	isRelative,
 	generateMoveFn
-} from 'utils';
+} from './utils.js';
 
 import {
 	// mouse
@@ -12,7 +12,7 @@ import {
 	// touch
 	touchstart,
 	touchstop
-} from 'events';
+} from './events.js';
 
 const moveFn = generateMoveFn();
 

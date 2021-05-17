@@ -1,12 +1,11 @@
 {
   "name": "displacejs-ilkkah",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Tiny javascript library to create moveable DOM elements.",
-  "main": "dist/displace.min.js",
+  "main": "dist/displace.js",
   "scripts": {
-    "lib-build": "cross-env NODE_PATH=. webpack --config ./webpack.config.build.js && cross-env NODE_PATH=. NODE_ENV=prod webpack --config ./webpack.config.build.js",
-    "lib-dev": "cross-env NODE_PATH=. webpack -w --config ./webpack.config.build.js",
-    "server": "http-server ./docs -p 3001 -c-1",
+    "build": "webpack --mode=production",
+    "buildd": "webpack --mode=development",
     "docs-js-watch": "cross-env NODE_PATH=. webpack -w --config ./webpack.config.docs.js",
     "docs-css-watch": "node-sass -w --output-style compressed --include-path ./node_modules  docs/scss/style.scss docs/style.css",
     "docs-dev": "npm run docs-css-watch & npm run docs-js-watch & npm run server"
@@ -27,32 +26,13 @@
   "bugs": {
     "url": "https://github.com/catc/displace/issues"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      [
-        "transform-es2015-classes",
-        {
-          "loose": true
-        }
-      ]
-    ]
-  },
   "homepage": "https://github.com/catc/displace",
-  "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.14.0",
-    "babel-eslint": "^6.0.5",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.14.0",
-    "cross-env": "^6.0.3",
-    "eslint": "^2.13.1",
-    "highlight.js": "^9.6.0",
-    "http-server": "^0.9.0",
-    "node-sass": "^4.13.0",
-    "webpack": "^1.13.2"
-  },
-  "types": "./src/displace.d.ts"
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
+  }
 }

@@ -14,17 +14,17 @@ export function generateMoveFn(){
 		return function(customFn){
 			const move = customFn || defaultMove;
 
-			return function (el, x, y){
+			return function (el, x, y, e){
 				window.requestAnimationFrame(function () {
-					move(el, x, y);
+					move(el, x, y, e);
 				});
 			};
 		};
 	}
 	return function (customFn) {
-		return function (el, x, y) {
+		return function (el, x, y, e) {
 			const move = customFn || defaultMove;
-			move(el, x, y);
+			move(el, x, y, e);
 		};
 	};
 }
